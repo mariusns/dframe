@@ -41,22 +41,6 @@ typedef enum df_type {
 
 
 
-/*
-#define DF_TYPE_PARTICIPANT 		1
-#define DF_TYPE_WORKER		 		2
-#define DF_TYPE_PUBLISHER	 		3
-#define DF_TYPE_WRITER		 		31
-#define DF_TYPE_SUBSCRIBER  		4
-#define DF_TYPE_READER 				41
-#define DF_TYPE_PROCESSOR	 		5
-#define DF_TYPE_EVENT	 			6
-#define DF_TYPE_DATA	 			7
-#define DF_TYPE_TOPIC	 			8
-#define DF_TYPE_ENTITY	 			9
-#define DF_TYPE_CONFIG	 			10
-#define DF_TYPE_CFG		 			11
-#define DF_TYPE_VECTOR	 			12
-*/
 #define DF_NO_NUMBER (-1)
 
 

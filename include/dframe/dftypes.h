@@ -64,8 +64,6 @@ typedef struct dfentity_s{
 }dfentity_t;
 
 
-
-
 typedef struct dfdata_s{
 	const df_type_t type:DF_TYPE_DATA;
 	const void **buffer;
@@ -147,7 +145,6 @@ typedef struct dfsubscriber_s{
 	int32_t n:DF_NO_NUMBER;
 }dfsubscriber_t;
 
-
 typedef struct dfpublisher_s{
 	const df_type_t type;
 	bool enable:false;
@@ -158,7 +155,6 @@ typedef struct dfpublisher_s{
 	bool enable:false;
 	dds_return_t status:DDS_RETCODE_ALREADY_DELETED;
 }dfpublisher_t;
-
 
 typedef struct dfworker_s {
 	const df_type_t type:DF_TYPE_WORKER;
