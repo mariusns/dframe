@@ -179,12 +179,21 @@ typedef struct dfworker_s {
 
 typedef struct dfparticipant_s{
 	const df_type_t type:DF_TYPE_PARTICIPANT;
+	dfdomain_t *domain;
 	dfentity_t *entity;
 	const dfworker_t *workers; //??
 	int32_t 	n:DF_NO_NUMBER;
 	bool enable:false;
 	dds_return_t status:DDS_RETCODE_ALREADY_DELETED;
 }dfparticipant_t;
+
+typedef struct dfdomain_s{
+	const df_type_t type:DF_TYPE_DOMAIN;
+	dfentity_t *entity;
+	bool enable:false;
+	dds_return_t status:DDS_RETCODE_ALREADY_DELETED;
+}dfdomain_t;
+
 
 #endif /* DFTYPES_H_ */
 
