@@ -20,6 +20,7 @@
 #include "subscriber.h"
 #include "worker.h"
 #include "participant.h"
+#include "domain.h"
 
 
 #endif /* INCLUDE_DFRAME_DFRAME_H_ */

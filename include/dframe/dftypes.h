@@ -1,5 +1,5 @@
 /*
-'
+*
 * Distributed under the terms of the GNU General Public License v2
 * Copyright 2023 Marius Norvoll Sletten
 *
@@ -19,6 +19,9 @@
 
 
 /*API accessable datatypes */
+
+
+
 
 
 
@@ -179,8 +182,8 @@ typedef struct dfworker_s {
 
 typedef struct dfparticipant_s{
 	const df_type_t type:DF_TYPE_PARTICIPANT;
-	dfdomain_t *domain;
 	dfentity_t *entity;
+	dfdomain_t *domain;
 	const dfworker_t *workers; //??
 	int32_t 	n:DF_NO_NUMBER;
 	bool enable:false;
@@ -193,6 +196,15 @@ typedef struct dfdomain_s{
 	bool enable:false;
 	dds_return_t status:DDS_RETCODE_ALREADY_DELETED;
 }dfdomain_t;
+
+
+typedef struct dfdriver_s {
+	dds_return_t (*alloc)(dfentity_t *entity, dds_entity_t parent, df_type_t type , ecfg_t *cfg);
+	dds_return_t (*enable)(dfentity_t *entity);
+	dds_return_t (*enabled)(dfentity_t *entity);
+	dds_return_t (*free)(dfentity_t *entity);
+	df_type_t	(*type)(dfentity_t *entity);
+}dfdriver_f;
 
 
 #endif /* DFTYPES_H_ */
